@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+    - 10.23.0
+script:
+    - docker --version
+    - echo "Beginning docker build"
+    - docker build -t udagaram-feed-api .
+    - docker tag simple-node renjithtech6/udagaram-feed-api
+
+after_success:
+    - echo "About to create container in Docker registry"
+    - echo "$D_PSWD" | docker login -u "$D_UNAME" --password-stdin
+    - docker push renjithtech6/udagaram-feed-api
