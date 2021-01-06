@@ -5,9 +5,6 @@ branchrs:
     only:
     - master
 script:
-    - npm run clean
-    - npm run build
-    - docker --version
     - echo "Beginning docker build"
     - docker build -t udagaram-feed-api .
     - docker tag udagaram-feed-api renjithtech6/udagaram-feed-api
