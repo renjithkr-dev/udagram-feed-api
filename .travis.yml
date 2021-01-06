@@ -2,6 +2,7 @@ language: node_js
 node_js:
     - 10.23.0
 script:
+    - npm run build
     - docker --version
     - echo "Beginning docker build"
     - docker build -t udagaram-feed-api .
