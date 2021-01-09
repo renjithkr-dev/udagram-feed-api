@@ -38,7 +38,7 @@ import {V0_FEED_MODELS, V0_USER_MODELS} from './controllers/v0/model.index';
 
 
   // Start the Server
-  app.listen( port, () => {
+  app.listen( 8082,"0.0.0.0", () => {
     console.log( `server running on port ${port}` );
     console.log( `press CTRL+C to stop server` );
   } );
