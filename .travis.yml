@@ -4,6 +4,7 @@ node_js:
 branchrs:
     only:
     - master
+    - debug
 script:
     - echo "Beginning docker build"
     - docker build -t udagram-feed-api .
